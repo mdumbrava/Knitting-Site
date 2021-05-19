@@ -5,77 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link rel="shortcut icon" type="image/x-icon" href="/static/kdaicon.jpg" /> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="/static/style.css">  
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link href='https://fonts.googleapis.com/css?family=Give You Glory' rel='stylesheet'>
 </head>
 
 
 <body>
 
-<div class= "d-flex justify-content-between" style="position: fixed;top: 0;width: 100%; padding: auto;">
-
-    <!-- <div class="dropdown">
-        <i class="material-icons" style="font-size: 45px; margin-left: 10px; margin-top: 5px;">menu</i>
-    
-        <div class="dropdown-content">
-            <a class="dropdown-item" href="/"> Home </a>                
-            <a class="dropdown-item" href="#"> Shop Hats </a>
-            <a class="dropdown-item" href="#"> Shop Gloves </a>  
-            <a class="dropdown-item" href="#"> Shop Sweaters </a>
-            <a class="dropdown-item" href="#"> Shop Blankets </a>
-                    
+<div id="container" style="display: flex; flex-direction: row; justify-content: space-between; 
+                            position: fixed;top: 0;width: 100%; padding: auto;">
+        
+            
+     <div class="dropdown">
+        <i class="material-icons" style="font-size: 55px; margin-left: 10px; margin-top: 5px;">menu</i>
+            <div class="dropdown-content">       
+                    <ul>
                         
-        </div>
-        
-    </div> -->
-
-    <div id="container">
-        
-            <i class="material-icons" style="font-size: 45px; margin-left: 10px; margin-top: 5px;">menu</i>
-             
-                <ul>
-                    
-                    <li>Home</li>
-                    <li>Shop
-                        <ul>
-                            <li>Shop Hats</li>
-                            <li>Shop Gloves</li>
-                            <li>Shop Sweaters</li>
-                            <li>Shop Blankets</li>
-                            <li>Customer Orders</li>
-                        </ul>
-                    </li>
-                    <li>Contact Us</li>
-                    <li>My Account</li>
-                </ul>
-         
+                        <a href="/"><li>Home</li></a>
+                        <li><a href="/">Shop</a>
+                            <ul>
+                                <li>Shop Hats</li>
+                                <li>Shop Gloves</li>
+                                <li>Shop Sweaters</li>
+                                <li>Shop Blankets</li>
+                                <li>Customer Orders</li>
+                            </ul>
+                        </li>
+                        <li>Contact Us</li>
+                        <a href="/account"><li>My Account</li></a>
+                    </ul>
+            </div> 
 
 
     </div>
 
     <div>
-        <h1>&nbsp;&nbsp; Miha's Knitted Goods</h1>
+        <h1 style="font-size: 42px;">&nbsp;&nbsp;&nbsp; {{ value }} </h1>
     </div>
 
     <div>
-        <i class="material-icons" style="font-size: 45px; margin-top: 5px;">perm_identity</i>
-        <i class="material-icons" style="font-size: 45px; margin-top: 5px;">search</i>
-        <i class="material-icons" style="font-size: 45px; margin-top: 5px; margin-right: 10px;">shopping_cart</i>
+        <a href="/account"><i class="material-icons" style="font-size: 55px; margin-top: 5px;">perm_identity</i></a>
+        <i class="material-icons" style="font-size: 55px; margin-top: 5px;">search</i>
+        <i class="material-icons" style="font-size: 55px; margin-top: 5px; margin-right: 10px;">shopping_cart</i>
     </div>
 
 </div>
-<br><br><br><br><br>
-
-</body>
-<br><br><br><br><br>
+<br><br><br>
 
 
 {% block content %}
 
+
 {% endblock %}
 
-
-
+</body>
+</html>

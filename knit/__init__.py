@@ -21,8 +21,8 @@ def create_app():
     app.register_blueprint(home)
 
     # # Ahri Blueprint
-    # from KDA.Ahri import bp as Ahri
-    # app.register_blueprint(Ahri)
+    from knit.account import bp as account
+    app.register_blueprint(account)
 
     # # # Akali Blueprint
     # from KDA.Akali import bp as Akali
