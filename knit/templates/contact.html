@@ -1,0 +1,35 @@
+{% extends 'nav.html' %} {% block content %}
+<br><br>
+<div style="text-align: center; width: 800px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+    <p style="font-size: 25px;">
+        Hello! Please fill out the form below to get into contact with us about antything concerning your order.
+        <br><br>
+        Please include your order number so we can better serve you.
+        <br>
+        We will get back to you as soon as possible.
+        <br>
+    </p>
+</div>
+<br>
+<div class="container" style="width: 800px; margin: auto;">
+    <form action="action_page.php">
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+   
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div>
+<br><br><br><br>
+
+
+{% include 'footer.html' %}
+
+ {% endblock %}

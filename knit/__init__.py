@@ -16,25 +16,25 @@ def create_app():
 
 
 
-    # KDA Blueprint
+    # home BP
     from knit.home import bp as home
     app.register_blueprint(home)
 
-    # # Ahri Blueprint
+    # # My Account Blueprint
     from knit.account import bp as account
     app.register_blueprint(account)
 
-    # # # Akali Blueprint
-    # from KDA.Akali import bp as Akali
-    # app.register_blueprint(Akali)
+    # # # about us Blueprint
+    from knit.about import bp as about
+    app.register_blueprint(about)
     
-    # # # Evelyn Blueprint
-    # from KDA.Evelyn import bp as Evelyn
-    # app.register_blueprint(Evelyn)
+    # # # privacy policy Blueprint
+    from knit.policy import bp as policy
+    app.register_blueprint(policy)
  
-    # # # Kai'sa Blueprint
-    # from KDA.Kaisa import bp as Kaisa
-    # app.register_blueprint(Kaisa)
+    # # # customer service Blueprint
+    from knit.service import bp as service
+    app.register_blueprint(service)
     
     # # # Seraphine Blueprint
     # from KDA.Seraphine import bp as Seraphine
