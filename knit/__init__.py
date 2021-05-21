@@ -36,9 +36,9 @@ def create_app():
     from knit.service import bp as service
     app.register_blueprint(service)
     
-    # # # Seraphine Blueprint
-    # from KDA.Seraphine import bp as Seraphine
-    # app.register_blueprint(Seraphine)
+    # # # shop Blueprint
+    from knit.shop import bp as shop
+    app.register_blueprint(shop)
 
     #     # Authenticate Blueprint
     # from KDA.Auth import bp as Auth

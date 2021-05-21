@@ -1,0 +1,38 @@
+{% extends 'nav.html' %} {% block content %}
+
+<div style="text-align: center; width: 660px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+
+    <div style="display: flex; flex-direction: row; justify-content: space-between; width: fit-content; padding: 25px; ">
+        <div>
+            <img src="/static/hats/IMG_1778.jpg"  style="width: 300px;height: 370px ; padding: 25px;" > 
+            <a href="/shop/hats"><h2>Shop Hats</h2></a>
+        </div>
+        <div>
+            <img src="/static/gloves/3.jpg"  style="width: 300px;height: 370px ; padding: 25px;" >
+            <a href="/shop/gloves"><h2>Shop Gloves</h2></a>
+        </div>
+    </div>
+
+    <div style="display: flex; flex-direction: row; justify-content: space-between; width: fit-content; padding: 25px;">
+        <div>
+            <img src="/static/sweaters/IMG_2102.jpg"  style="width: 300px;height: 370px ; padding: 25px;" > 
+            <a href="/shop/sweaters"><h2>Shop Sweaters</h2></a>
+        </div>
+        <div>
+            <img src="/static/blankets/IMG_1165.jpg"  style="width: 300px;height: 370px ; padding: 25px;" >
+            <a href="/shop/blankets"><h2>Shop Blankets</h2></a>
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: space-between; width: fit-content; padding: 25px;">
+        <div>
+            <img src="/static/scarves/IMG_0409.jpg"  style="width: 300px;height: 370px ; padding: 25px;" > 
+            <a href="/shop/scarves"><h2>Shop Scarves</h2></a>
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+{% include 'footer.html' %}
+
+ {% endblock %}
