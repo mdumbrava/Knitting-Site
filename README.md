@@ -1,3 +1,3 @@
 This is my first e-commerce website.
 
-To see website please click knitting.dmbrv.com
+To see website please click http://knitting.dmbrv.com
