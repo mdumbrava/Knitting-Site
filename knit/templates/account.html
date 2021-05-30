@@ -1,6 +1,46 @@
 {% extends 'nav.html' %} {% block content %}
 
 
+
+<div style="text-align: center; width: 800px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+
+    {% if email == "Guest" %}
+    <br>    
+    <h1>Please make an account to view "My Account Page"</h1>
+    <a href="/account/form"><h2><u>Registration Page</u></h2></a><br>
+
+    <h1>Please login to view "My Account Page"</h1>
+    <a href="/account/loginform"><h2><u>Login Page</u></h2></a><br>
+
+    {% endif %}
+</div>
+
+
+
+<div style="text-align: center; width: 800px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+
+  {% if email != "Guest" %}
+
+    <h2>Email Address:</h2>
+    <h3>{{ email }}</h3>
+
+    {% endif %}
+</div>
+  
+
+
+
+<br><br>
+
+<div style="text-align: center; width: 800px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+
+    <a href="/account/logout"><h1>LOGOUT</h1></a>
+</div>
+
+<br><br>
+
+{% include 'footer.html' %}
+
 {% endblock %}
 
 
