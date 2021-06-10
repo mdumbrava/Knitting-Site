@@ -1,0 +1,25 @@
+{% extends 'nav.html' %} {% block content %}
+
+<div style="text-align: center; width: 700px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+    <h2>Editing Products to Database</h2>
+
+    <form action="/products/update" method="POST">
+        <input type="text"  name="id" value="{{data.id}}" readonly><br>
+        <label for="name">Product Name:</label><br> 
+        <input type="text" name="name" value="{{data.name}}"><br> 
+        <label for="desc">Product Description:</label><br>
+        <textarea rows="3" cols="50" name="desc">{{data.desc}}</textarea><br>
+        <label for="price">Product Price:</label><br> 
+        <input type="text" name="price" value="{{data.price}}" data-type="currency"><br>
+        <label for="category">Product Category:</label><br> 
+        <input type="text" name="category" value="{{data.category}}"><br>  
+        <label for="enable">Product Available:</label><br> 
+        <input type="text" name="enable" value="{{data.enable}}"><br> 
+        <label for="picture">Picture Name:</label><br> 
+        <input type="text" name="picture" value="{{data.picture}}"><br> 
+        <br>
+        <input type="submit" value="Submit">
+    </form> 
+</div>
+
+{% endblock %}

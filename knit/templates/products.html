@@ -1,0 +1,59 @@
+{% extends 'nav.html' %} {% block content %}
+<br>
+
+<div style="text-align: center; width: 700px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+    <h2>Adding Products to Database</h2>
+
+    <form action="/products/add" method="POST">
+        <label for="name">Product Name:</label><br> 
+        <input type="text" name="name" value=""><br> 
+        <label for="desc">Product Description:</label><br>
+        <textarea rows="3" cols="50" name="desc" value=""></textarea><br>
+        <label for="price">Product Price:</label><br> 
+        <input type="text" name="price" value="" data-type="currency"><br>
+        <label for="category">Product Category:</label><br> 
+        <input type="text" name="category" value=""><br>  
+        <label for="enable">Product Available:</label><br> 
+        <input type="text" name="enable" value=""><br> 
+        <label for="picture">Picture Name:</label><br> 
+        <input type="text" name="picture" value=""><br> 
+        <br>
+        <input type="submit" value="Submit">
+    </form> 
+<br><br><br>
+
+Page: {{ data.page }} <br>
+{% for page in data.iter_pages() %}
+{% if page %}
+    <a href="/products/{{ page }}"> {{ page }} </a>
+{% else %}
+    ...
+{% endif %}
+
+{% endfor %}
+
+<br><br>
+
+{% for x in data.items %}
+
+<br>
+
+{{ x.id }}  <b>{{ x.name }}</b> {{ x.desc }} , {{ x.price }} , {{ x.category }}, {{ x.enable }}, {{ x.picture }}
+<br>
+{% if user == "miha_123@gmail.com" %}
+<a href="/products/form/{{x.id}}"> <b>Edit Product</b> </a> <br>
+<a href="/products/delete/{{x.id}}"> <b>Delete Product</b> </a>
+{% endif %}
+
+<br><br>
+
+{% endfor %}
+
+
+
+
+</div>
+<br><br>
+
+
+{% endblock %}

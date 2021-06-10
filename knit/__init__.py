@@ -76,8 +76,8 @@ def create_app():
     from knit.shop import bp as shop
     app.register_blueprint(shop)
 
-    #     # Authenticate Blueprint
-    # from KDA.Auth import bp as Auth
-    # app.register_blueprint(Auth)
+    #     # Adding products Blueprint
+    from knit.products import bp as products
+    app.register_blueprint(products)
 
     return app
