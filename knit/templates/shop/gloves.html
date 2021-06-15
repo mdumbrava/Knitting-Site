@@ -2,7 +2,47 @@
 
 <br><br>
 
-<div style="text-align: center; width: 1200px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+<div style="text-align: center; width: 1300px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding:50px">
+
+        {% for x in data %}
+
+            <div>
+                <img src="/static/gloves/{{ x.picture }}"  style="width: 300px;height: 370px ; padding: 25px;" >
+                <h2>{{ x.name }}</h2>
+                <h3>{{ x.price }}$</h3>
+                    <div style="width: 400px;">
+                    <p>Description: <br>
+                        {{ x.desc}}
+                    </p> 
+                
+                    </div>
+            <br>
+            </div>
+            
+
+
+        {% endfor %}
+    
+    </div>
+
+
+
+
+
+</div>
+<br><br>
+
+<br><br><br>
+
+{% include 'footer.html' %}
+
+ {% endblock %}
+
+
+
+ <!-- <div style="text-align: center; width: 1200px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
 
     <div style="display: flex; flex-direction: row; justify-content: space-between; padding:50px">
 
@@ -32,10 +72,4 @@
         </div>
 
     </div>
-</div>
-
-<br><br><br>
-
-{% include 'footer.html' %}
-
- {% endblock %}
+</div> -->

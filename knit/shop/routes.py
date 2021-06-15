@@ -1,6 +1,8 @@
 from flask import render_template, redirect, request, session
 from . import bp
 from datetime import date
+from knit.db_knit import TblProducts
+from knit import db
 
 @bp.route('/')
 def shop():
@@ -10,24 +12,34 @@ def shop():
 @bp.route('/hats')
 def hats():
    value = "Shop Hats"
-   return render_template('shop/hats.html', value=value,)
+   data=TblProducts.query.order_by(TblProducts.id.desc()).filter_by(category="hat").all()
+   db.session.close()
+   return render_template('shop/hats.html', value=value, data=data)
 
 @bp.route('/gloves')
 def gloves():
    value = "Shop gloves"
-   return render_template('shop/gloves.html', value=value,)
+   data=TblProducts.query.order_by(TblProducts.id.desc()).filter_by(category="gloves").all()
+   db.session.close()
+   return render_template('shop/gloves.html', value=value, data=data)
 
 @bp.route('/sweaters')
 def sweaters():
    value = "Shop Sweaters"
-   return render_template('shop/sweaters.html', value=value,)
+   data=TblProducts.query.order_by(TblProducts.id.desc()).filter_by(category="sweaters").all()
+   db.session.close()
+   return render_template('shop/sweaters.html', value=value, data=data)
 
 @bp.route('/blankets')
 def blankets():
    value = "Shop Blankets"
-   return render_template('shop/blankets.html', value=value,)
+   data=TblProducts.query.order_by(TblProducts.id.desc()).filter_by(category="blankets").all()
+   db.session.close()
+   return render_template('shop/blankets.html', value=value, data=data)
 
 @bp.route('/scarves')
 def scarves():
    value = "Shop Scarves"
-   return render_template('shop/scarves.html', value=value,)
+   data=TblProducts.query.order_by(TblProducts.id.desc()).filter_by(category="scarves").all()
+   db.session.close()
+   return render_template('shop/scarves.html', value=value, data=data)

@@ -1,47 +1,79 @@
 {% extends 'nav.html' %} {% block content %}
 <br><br>
 
-<div style="text-align: center; width: 1600px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+<div style="text-align: center; width: 1100px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
 
-    <div style="display: flex; flex-direction: row; justify-content: space-between; padding:50px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding:70px">
 
-        <div>
-            <img src="/static/sweaters/1.JPEG"  style="width: 350px;height: 370px ; padding: 25px;" >
-            <h2>Gryffindor Knitted Sweater</h2><br>
-            <h3>Price: 300$</h3><br>
-            <p>Description: <br>
-                Handmade Gryffindor knitted sweater made with <br> 100% acrylic.
-            </p> 
-        </div>
-        <div>
-            <img src="/static/sweaters/2.JPG"  style="width: 350px;height: 370px ; padding: 25px;" >
-            <h2>Multicolour Knitted Sweater</h2><br>
-            <h3>Price: 300$</h3><br>
-            <p>Description: <br>
-                Handmade knitted sweater made with <br> 40% wool and 60% acrylic.  
-            </p> 
-        </div>
-        <div>
-            <img src="/static/sweaters/3.JPG"  style="width: 350px;height: 370px ; padding: 25px;" >
-            <h2>Multicolour Knitted Sweater</h2><br>
-            <h3>Price: 300$</h3><br>
-            <p>Description: <br>
-                Handmade knitted sweater made with <br> 100% wool.  
-            </p>     
-        </div>
-        <div>
-            <img src="/static/sweaters/4.JPG"  style="width: 350px;height: 370px ; padding: 25px;" >
-            <h2>Multicolour Knitted Sweater</h2><br>
-            <h3>Price: 300$</h3><br>
-            <p>Description: <br>
-                Handmade knitted sweater made with <br> 40% wool and 60% acrylic.  
-            </p>     
-        </div>
+        {% for x in data %}
 
+            <div>
+                <img src="/static/sweaters/{{ x.picture }}"  style="width: 375px;height: 380px ; padding: 25px;" >
+                <h2>{{ x.name }}</h2>
+                <h3>{{ x.price }}$</h3>
+
+                <div style="width: 400px;">
+                    <p >Description: <br>
+                        {{ x.desc}} 
+                    </p>
+                </div>    
+            <br>
+            </div>
+            
+
+
+        {% endfor %}
+    
     </div>
+
 </div>
 
 <br><br>
     {% include 'footer.html' %}
 
     {% endblock %}
+
+
+
+
+
+
+    <!-- <div style="text-align: center; width: 1600px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; padding:50px">
+    
+            <div>
+                <img src="/static/sweaters/1.JPEG"  style="width: 350px;height: 370px ; padding: 25px;" >
+                <h2>Gryffindor Knitted Sweater</h2><br>
+                <h3>Price: 300$</h3><br>
+                <p>Description: <br>
+                    Handmade Gryffindor knitted sweater made with <br> 100% acrylic.
+                </p> 
+            </div>
+            <div>
+                <img src="/static/sweaters/2.JPG"  style="width: 350px;height: 370px ; padding: 25px;" >
+                <h2>Multicolour Knitted Sweater</h2><br>
+                <h3>Price: 300$</h3><br>
+                <p>Description: <br>
+                    Handmade knitted sweater made with <br> 40% wool and 60% acrylic.  
+                </p> 
+            </div>
+            <div>
+                <img src="/static/sweaters/3.JPG"  style="width: 350px;height: 370px ; padding: 25px;" >
+                <h2>Multicolour Knitted Sweater</h2><br>
+                <h3>Price: 300$</h3><br>
+                <p>Description: <br>
+                    Handmade knitted sweater made with <br> 100% wool.  
+                </p>     
+            </div>
+            <div>
+                <img src="/static/sweaters/4.JPG"  style="width: 350px;height: 370px ; padding: 25px;" >
+                <h2>Multicolour Knitted Sweater</h2><br>
+                <h3>Price: 300$</h3><br>
+                <p>Description: <br>
+                    Handmade knitted sweater made with <br> 40% wool and 60% acrylic.  
+                </p>     
+            </div>
+    
+        </div>
+    </div> -->

@@ -1,39 +1,72 @@
 {% extends 'nav.html' %} {% block content %}
 <br><br>
 
-<div style="text-align: center; width: 1200px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+<div style="text-align: center; width: 1350px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
 
-    <div style="display: flex; flex-direction: row; justify-content: space-between; padding:50px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; padding:50px">
 
-        <div>
-            <img src="/static/scarves/1.JPG"  style="width: 300px;height: 370px ; padding: 25px;" >
-            <h2>Braided Purple Scarf</h2><br>
-            <h3>Price: 70$</h3><br>
-            <p>Description: <br>
-                Handmade knitted scarf  <br>made with 100% acrylic.
-            </p> 
-        </div>
-        <div>
-            <img src="/static/scarves/2.JPG"  style="width: 300px;height: 370px ; padding: 25px;" >
-            <h2>Gryffindor House Scarf</h2><br>
-            <h3>Price: 60$</h3><br>
-            <p>Description: <br>
-                Handmade knitted Gryffindor House <br> made with 100% acrylic.  
-            </p> 
-        </div>
-        <div>
-            <img src="/static/scarves/3.JPG"  style="width: 300px;height: 370px ; padding: 25px;" >
-            <h2>Pink Ombre Scarf</h2><br>
-            <h3>Price: 50$</h3><br>
-            <p>Description: <br>
-                Handmade knitted chunky scarf <br> 40% wool and 60% acrylic.  
-            </p>     
-        </div>
+        {% for x in data %}
 
+            <div>
+                <img src="/static/scarves/{{ x.picture }}"  style="width: 300px;height: 370px ; padding: 25px;" >
+                <h2>{{ x.name }}</h2>
+                <h3>{{ x.price }}$</h3>
+                
+                <div style="width: 400px;">
+                    <p>Description: <br>
+                        {{ x.desc}}
+                    </p> 
+                </div>
+            <br>
+            </div>
+            
+
+
+        {% endfor %}
+    
     </div>
+
+
+
+
+
 </div>
 
 <br><br>
     {% include 'footer.html' %}
 
     {% endblock %}
+
+<!-- 
+    <div style="text-align: center; width: 1200px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; padding:50px">
+    
+            <div>
+                <img src="/static/scarves/1.JPG"  style="width: 300px;height: 370px ; padding: 25px;" >
+                <h2>Braided Purple Scarf</h2><br>
+                <h3>Price: 70$</h3><br>
+                <p>Description: <br>
+                    Handmade knitted scarf  <br>made with 100% acrylic.
+                </p> 
+            </div>
+            <div>
+                <img src="/static/scarves/2.JPG"  style="width: 300px;height: 370px ; padding: 25px;" >
+                <h2>Gryffindor House Scarf</h2><br>
+                <h3>Price: 60$</h3><br>
+                <p>Description: <br>
+                    Handmade knitted Gryffindor House <br> made with 100% acrylic.  
+                </p> 
+            </div>
+            <div>
+                <img src="/static/scarves/3.JPG"  style="width: 300px;height: 370px ; padding: 25px;" >
+                <h2>Pink Ombre Scarf</h2><br>
+                <h3>Price: 50$</h3><br>
+                <p>Description: <br>
+                    Handmade knitted chunky scarf <br> 40% wool and 60% acrylic.  
+                </p>     
+            </div>
+    
+        </div>
+    </div> -->
+    
