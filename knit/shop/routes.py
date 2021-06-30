@@ -43,3 +43,21 @@ def scarves():
    data=TblProducts.query.order_by(TblProducts.id.desc()).filter_by(category="scarves").all()
    db.session.close()
    return render_template('shop/scarves.html', value=value, data=data)
+
+# this is for the search option 
+@bp.route('/search_form')
+def search_form():
+   value = "Search"
+   return render_template('shop/search_form.html', value=value,)
+
+@bp.route('/search' , methods=["POST"])
+def search():
+   value = "Search Results"
+   val_search=request.form ["search"]
+   data=TblProducts.query.order_by(TblProducts.id.desc()).filter(
+      (TblProducts.name.like('%{}%'.format(val_search))) | 
+      (TblProducts.desc.like('%{}%'.format(val_search))) | 
+      (TblProducts.category.like('%{}%'.format(val_search)))  
+      ).all()
+   db.session.close()
+   return render_template('shop/search.html', value=value, data=data)

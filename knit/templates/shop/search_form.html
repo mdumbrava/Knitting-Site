@@ -1,0 +1,32 @@
+{% extends 'nav.html' %} {% block content %}
+
+
+<br><br>
+
+<div style="text-align: center; width: 800px; margin: auto; background-color: rgb(252, 252, 252 , 0.8);">
+<br>
+<br>
+    
+    <div style="font-size: 22px;">
+
+    <form action="/shop/search" method="POST">
+        
+        <input type="text" name="search" value="" style="width: 400px;"><br><br>
+
+        <input type="submit" value="Search">
+    </form>
+    <br><br>
+    </div>
+
+</div>
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+
+
+{% include 'footer.html' %}
+
+{% endblock %}
